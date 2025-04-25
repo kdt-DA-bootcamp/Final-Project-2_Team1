@@ -55,4 +55,4 @@ print(df_recent['period_score'].value_counts())
 print(df_recent[['상호명', 'period_score']].tail(10))
 
 df_recent_save = df_recent[['상가업소번호','period_score']]
-df_recent_save.to_csv(r'C:\Users\iq750\bootcamp_git\Final-Project-2_Team1\data\카페_운영기간점수.csv', encoding = 'utf-8-sig', index = False)
+df_recent_save.to_csv(r'C:\Users\iq750\bootcamp_git\Final-Project-2_Team1\data\카페_점수.csv', encoding = 'utf-8-sig', index = False)
