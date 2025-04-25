@@ -1,1 +1,4 @@
-.csv
+*.csv
+.env
+.gitignore
+cafe_accessibility.ipynb
