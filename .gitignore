@@ -1,3 +1,4 @@
 *.csv
 .env
-.gitignore
+.gitignoredata/AL_D010_11_20250404.dbf
+data/AL_D010_11_20250404.shp
