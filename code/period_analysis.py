@@ -53,6 +53,9 @@ df_recent.loc[df_recent['상가업소번호'].isin(df_list[0]['상가업소번�
 
 print(df_recent['period_score'].value_counts())
 print(df_recent[['상호명', 'period_score']].tail(10))
-
+df_cafes = pd.read_csv(r'C:\Users\iq750\bootcamp_git\Final-Project-2_Team1\data\카페_상권_매핑_데이터_중복제거.csv')
+print(len(df_cafes))
 df_recent_save = df_recent[['상가업소번호','period_score']]
-df_recent_save.to_csv(r'C:\Users\iq750\bootcamp_git\Final-Project-2_Team1\data\카페_점수.csv', encoding = 'utf-8-sig', index = False)
+df_recent_save = df_recent_save[df_recent_save['상가업소번호'].isin(df_cafes['상가업소번호'])]
+print(len(df_recent_save))
+df_recent_save.to_csv(r'C:\Users\iq750\bootcamp_git\Final-Project-2_Team1\data\점수산출 \카페_점수_0502.csv', encoding = 'utf-8-sig', index = False)
