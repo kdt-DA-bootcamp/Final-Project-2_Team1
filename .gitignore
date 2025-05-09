@@ -4,11 +4,9 @@
 .env
 /data/상가정보/
 /data/점수산출/전체건물정보/
-/data/점수산출/서울시 휴게음식점 인허가 정보.csv
 /data/서울시 상권분석서비스(추정매출-상권)_2024년.csv
 /data/점수산출/도로정보/
 /data/시각화/서울_전체_건물_도로_지도.html
 /code/visability.ipynb
 
-/data/건물_도로_시인성_분석.csv
-/data/건물_도로_시인성_분석.geojson
+/data/대용량
