@@ -27,19 +27,21 @@ score_list = ['period_score','parking_score','floor_score','sales_score_grouped'
 
 #리뷰와 영업기간 높게, 매출은 조금 적게
 # df['total_score'] = df[score_list].sum(axis=1)
-df['total_score'] = df['period_score'] * 0.2 + df['rating_score'] * 0.3 + df['5bin_review_score'] * 0.3 + df['sales_score_grouped'] * 0.1 + df['profit_score_grouped'] * 0.1 + (df['parking_score'] * 0.2 + df['floor_score'] * 0.2) # 괄호는 보너스 스코어 (0 or 1)
+df['총점'] = df['period_score'] * 0.2 + df['rating_score'] * 0.3 + df['5bin_review_score'] * 0.3 + df['sales_score_grouped'] * 0.1 + df['profit_score_grouped'] * 0.1 + (df['parking_score'] * 0.2 + df['floor_score'] * 0.2) # 괄호는 보너스 스코어 (0 or 1)
 # 2. 어떤 기준을 성공한 카페라고 할 수 있는가?
 # 상위 30%
-cutoff_70 = df['total_score'].quantile(0.7)
-df['sucess']  = (df['total_score'] >= cutoff_70).astype(int)
+cutoff_70 = df['총점'].quantile(0.7)
+df['성공_여부']  = (df['총점'] >= cutoff_70).astype(int)
 
-sns.histplot(df['total_score'], bins=20, kde=True)
-plt.title("가중치 합산 점수 분포_2")
-plt.xlabel("총점")
-plt.ylabel("카페 수")
-plt.savefig(r'C:\Users\iq750\bootcamp_git\Final-Project-2_Team1\data\시각화\성공카페_점수분포_가중치2.png')
-plt.show()
+# sns.histplot(df['total_score'], bins=20, kde=True)
+# plt.title("가중치 합산 점수 분포_2")
+# plt.xlabel("총점")
+# plt.ylabel("카페 수")
+# plt.savefig(r'C:\Users\iq750\bootcamp_git\Final-Project-2_Team1\data\시각화\성공카페_점수분포_가중치2.png')
+# plt.show()
 
+df.to_csv(r'C:\Users\iq750\bootcamp_git\Final-Project-2_Team1\data\점수산출\카페_성공여부.csv', encoding = 'utf-8-sig', index = False)
+sys.exit()
 # 성공 카페와 매물 추천 feature들 간의 상관관계 파악하기
 features = pd.read_csv(r'C:\Users\iq750\bootcamp_git\Final-Project-2_Team1\data\매물추천\카페_통합_최종데이터.csv')
 add_feature = pd.read_csv(r'C:\Users\iq750\bootcamp_git\Final-Project-2_Team1\data\점수산출\카페_추정매출결과_0511.csv')
