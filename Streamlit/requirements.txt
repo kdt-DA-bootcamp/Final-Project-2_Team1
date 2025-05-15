@@ -1,7 +1,0 @@
-streamlit==1.33.0
-pandas==2.2.1
-geopandas==0.14.3
-folium==0.15.1
-shapely==2.0.3
-branca==0.7.1
-streamlit-folium==0.15.0
