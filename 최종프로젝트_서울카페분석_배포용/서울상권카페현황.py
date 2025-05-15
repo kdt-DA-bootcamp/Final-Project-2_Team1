@@ -11,9 +11,9 @@ import urllib.parse
 
 
 # ✅ 경로 설정
-geo_path = r".\data\서울시_상권_경계_simplified.geojson"
-summary_path = r".\data\상권별_카페요약.csv"
-cafe_data_base_path = r".\data\상권별_카페데이터"
+geo_path = "./data/서울시_상권_경계_simplified.geojson"
+summary_path = "./data/상권별_카페요약.csv"
+cafe_data_base_path = "./data/상권별_카페데이터"
 
 # ✅ 페이지 설정
 st.set_page_config(layout="wide")

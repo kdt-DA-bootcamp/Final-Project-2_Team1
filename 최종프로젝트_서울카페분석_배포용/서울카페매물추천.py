@@ -10,9 +10,9 @@ from branca.colormap import linear
 import urllib.parse
 
 # ✅ 경로 설정
-boundary_path = r".\data\서울시_상권_경계_simplified.geojson"
-success_path = r".\data\매물_성공확률.csv"
-summary_path = r".\data\상권별_매물요약.csv"
+boundary_path = "./data/서울시_상권_경계_simplified.geojson"
+success_path = "./data/매물_성공확률.csv"
+summary_path = "./data/상권별_매물요약.csv"
 
 # ✅ 페이지 설정
 st.set_page_config(layout="wide")
