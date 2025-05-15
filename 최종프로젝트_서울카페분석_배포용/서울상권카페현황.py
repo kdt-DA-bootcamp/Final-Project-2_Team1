@@ -11,9 +11,9 @@ import urllib.parse
 
 
 # ✅ 경로 설정
-geo_path = r"C:\Users\hunae\Desktop\bootcamp\TIL\최종프로젝트2차\시각화\서울 카페 현황\서울시_상권_경계_simplified.geojson"
-summary_path = r"C:\Users\hunae\Desktop\bootcamp\TIL\최종프로젝트2차\시각화\서울 카페 현황\상권별_카페요약.csv"
-cafe_data_base_path = r"C:\Users\hunae\Desktop\bootcamp\TIL\최종프로젝트2차\시각화\서울 카페 현황\상권별_카페데이터"
+geo_path = r".\data\서울시_상권_경계_simplified.geojson"
+summary_path = r".\data\상권별_카페요약.csv"
+cafe_data_base_path = r".\data\상권별_카페데이터"
 
 # ✅ 페이지 설정
 st.set_page_config(layout="wide")

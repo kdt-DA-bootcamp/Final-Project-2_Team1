@@ -29,13 +29,13 @@ with st.sidebar.expander("☕ 카페 현황 필터", expanded=False):
 # ✅ 탭 1: 서울 카페 매물 추천
 with 탭_추천:
     st.session_state.active_tab = "추천"
-    추천_경로 = Path(r"C:/Users/hunae/Desktop/bootcamp/TIL/최종프로젝트2차/시각화/네이버부동산 매물 현황/3. 서울시_상가_분석데이터/서울카페매물추천.py")
+    추천_경로 = Path(r"서울카페매물추천.py")
     코드 = 추천_경로.read_text(encoding="utf-8").replace("st.set_page_config(layout=\"wide\")", "")
     exec(코드, globals())
 
 # ✅ 탭 2: 서울 상권 카페 현황
 with 탭_현황:
     st.session_state.active_tab = "현황"
-    현황_경로 = Path(r"C:/Users/hunae/Desktop/bootcamp/TIL/최종프로젝트2차/시각화/서울 카페 현황/서울상권카페현황.py")
+    현황_경로 = Path(r"서울상권카페현황.py")
     코드 = 현황_경로.read_text(encoding="utf-8").replace("st.set_page_config(layout=\"wide\")", "")
     exec(코드, globals())

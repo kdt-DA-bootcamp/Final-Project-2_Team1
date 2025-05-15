@@ -10,9 +10,9 @@ from branca.colormap import linear
 import urllib.parse
 
 # ✅ 경로 설정
-boundary_path = r"C:\Users\hunae\Desktop\bootcamp\TIL\최종프로젝트2차\시각화\서울 카페 현황\서울시_상권_경계_simplified.geojson"
-success_path = r"C:\Users\hunae\Desktop\bootcamp\TIL\최종프로젝트2차\시각화\서울 카페 현황\예진님\매물_성공확률.csv"
-summary_path = r"C:\Users\hunae\Desktop\bootcamp\TIL\최종프로젝트2차\시각화\네이버부동산 매물 현황\3. 서울시_상가_분석데이터\상권별_매물요약.csv"
+boundary_path = r".\data\서울시_상권_경계_simplified.geojson"
+success_path = r".\data\매물_성공확률.csv"
+summary_path = r".\data\상권별_매물요약.csv"
 
 # ✅ 페이지 설정
 st.set_page_config(layout="wide")
